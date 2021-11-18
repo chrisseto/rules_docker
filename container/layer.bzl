@@ -345,6 +345,12 @@ _layer_attrs = dicts.add({
 
         A list of files that should be included in the Docker image.""",
     ),
+    "file_map": attr.label_keyed_string_dict(
+        default = {},
+        allow_empty = True,
+        allow_files = True,
+        doc = """TODO""",
+    ),
     "mode": attr.string(
         default = "0o555",  # 0o555 == a+rx
         doc = "Set the mode of files added by the `files` attribute.",
